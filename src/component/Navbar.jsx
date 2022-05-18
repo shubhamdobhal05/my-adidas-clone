@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 import "./navbar.css";
 
@@ -23,13 +24,13 @@ const Navbar = () => {
             </div>
             <nav className="navigation">
                 <ul>
-                    <li><a href="">MEN</a></li>
-                    <li><a href="">WOMEN</a></li>
-                    <li><a href="">KIDS</a></li>
-                    <li><a href="">SPORTS</a></li>
-                    <li><a href="">BRANDS</a></li>
-                    <li><a href="">COLLECTIONS</a></li>
-                    <li><a href="">OUTLET</a></li>
+                    <li><Link to="/mens">MEN</Link></li>
+                    <li><Link to="womens">WOMEN</Link></li>
+                    <li><Link to="kids">KIDS</Link></li>
+                    <li><Link to="sports">SPORTS</Link></li>
+                    <li><Link to="brands">BRANDS</Link></li>
+                    <li><Link to="collections">COLLECTIONS</Link></li>
+                    <li><Link to="outlet">OUTLET</Link></li>
                     <li><input type="text" placeholder="Search" /></li>
                 </ul>
 
