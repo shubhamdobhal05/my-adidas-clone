@@ -25,12 +25,12 @@ const Navbar = () => {
             <nav className="navigation">
                 <ul>
                     <li><Link to="/mens">MEN</Link></li>
-                    <li><Link to="womens">WOMEN</Link></li>
-                    <li><Link to="kids">KIDS</Link></li>
-                    <li><Link to="sports">SPORTS</Link></li>
-                    <li><Link to="brands">BRANDS</Link></li>
-                    <li><Link to="collections">COLLECTIONS</Link></li>
-                    <li><Link to="outlet">OUTLET</Link></li>
+                    <li><Link to="/womens">WOMEN</Link></li>
+                    <li><Link to="/kids">KIDS</Link></li>
+                    <li><Link to="/sports">SPORTS</Link></li>
+                    <li><Link to="/brands">BRANDS</Link></li>
+                    <li><Link to="/collections">COLLECTIONS</Link></li>
+                    <li><Link to="/outlet">OUTLET</Link></li>
                     <li><input type="text" placeholder="Search" /></li>
                 </ul>
 
