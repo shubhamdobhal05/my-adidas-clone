@@ -4,7 +4,9 @@ import Mens from "./component/Mens";
 import Womens from "./component/Womens";
 import Kids from "./component/Kids";
 
+
 import { Routes, Route } from "react-router-dom";
+import KidsDetails from './component/KidsDetails';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path='/mens' element = {<Mens/>}/>
         <Route path='/womens' element = {<Womens/>}/>
         <Route path='/kids' element = {<Kids/>}/>
+        <Route path="/kids/:id" element = {<KidsDetails/>}/>
+
         
       </Routes>
       
