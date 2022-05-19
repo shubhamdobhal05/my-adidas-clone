@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux"
+import { Link } from "react-router-dom";
 import { storeData } from "../redux/actions/actions";
 import "./style.css"
 
@@ -35,7 +36,10 @@ const Kids = () => {
         <div className="container">
             {data.map(data => (
                 <div className="product" key={data.id}>
-                    <img className="img" src={data.img} alt={data.title}/>
+                <Link to={`/kids/${data.id}`}>
+                <img className="img" src={data.img} alt={data.title}/>
+                </Link>
+                    
                     <p>{data.price}</p>
                     <p>{data.title}</p>
                 </div>
