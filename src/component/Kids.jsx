@@ -4,13 +4,13 @@ import { storeData } from "../redux/actions/actions";
 import "./style.css"
 
 
-const Womens = () => {
+const Kids = () => {
 
     //get the data
     const dispatch = useDispatch();
 
     useEffect(() => {
-         fetch("https://ad-json-server.herokuapp.com/women")
+         fetch("https://ad-json-server.herokuapp.com/kids")
          .then((res) => res.json())
         
          .then((res) => dispatch(storeData(res)))
@@ -45,4 +45,4 @@ const Womens = () => {
 }
 
 
-export default Womens;
+export default Kids;

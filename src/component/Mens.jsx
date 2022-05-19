@@ -1,22 +1,29 @@
-import React, {useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import {useDispatch, useSelector} from "react-redux"
+import { storeData } from "../redux/actions/actions";
 import "./style.css"
 
 
-const Womens = () => {
+const Mens = () => {
 
-    const [data, setData] = useState([]);
-    
+    //get the data
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch("https://ad-json-server.herokuapp.com/mens")
-        .then((res) => res.json())
+         fetch("https://ad-json-server.herokuapp.com/mens")
+         .then((res) => res.json())
         
-        .then((res) => {console.log(res);
-            setData(res)})
-        .catch((err) => console.log(err))
+         .then((res) => dispatch(storeData(res)))
+         .catch((err) => console.log(err))
 
 
-    }, []);
+     }, []);
+
+
+     //read the data we have fetched
+     const data = useSelector((state) => state.data)
+
+     console.log(data);
 
 
     
@@ -38,4 +45,4 @@ const Womens = () => {
 }
 
 
-export default Womens;
+export default Mens;
