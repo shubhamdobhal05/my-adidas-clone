@@ -1,12 +1,13 @@
+import { Routes, Route } from "react-router-dom";
 import Home from './component/Home';
 import Navbar from './component/Navbar';
 import Mens from "./component/Mens";
 import Womens from "./component/Womens";
 import Kids from "./component/Kids";
-
-
-import { Routes, Route } from "react-router-dom";
+import MensDetails from './component/MensDetails';
+import WomensDetails from './component/WomensDetails';
 import KidsDetails from './component/KidsDetails';
+
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path='/mens' element = {<Mens/>}/>
         <Route path='/womens' element = {<Womens/>}/>
         <Route path='/kids' element = {<Kids/>}/>
+        <Route path="/mens/:id" element = {<MensDetails/>}/>
+        <Route path="/womens/:id" element = {<WomensDetails/>}/>
         <Route path="/kids/:id" element = {<KidsDetails/>}/>
 
         

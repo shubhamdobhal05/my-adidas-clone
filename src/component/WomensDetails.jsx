@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux"
+import { useParams } from "react-router-dom";
 import { storeData } from "../redux/actions/actions";
-import { Link } from "react-router-dom";
 import "./style.css"
 
 
-const Mens = () => {
+const WomensDetails = () => {
 
     //get the data
+    const {id} = useParams();
     const dispatch = useDispatch();
 
     useEffect(() => {
-         fetch("https://ad-json-server.herokuapp.com/mens")
+         fetch(`https://ad-json-server.herokuapp.com/women/${id}`)
          .then((res) => res.json())
         
          .then((res) => dispatch(storeData(res)))
@@ -34,18 +35,16 @@ const Mens = () => {
 
     return (
         <div className="container">
-            {data.map(data => (
+            
                 <div className="product" key={data.id}>
-                <Link to={`/mens/${data.id}`}>
-                <img className="img" src={data.img} alt={data.title}/>
-                </Link>
+                    <img className="img" src={data.img} alt={data.title}/>
                     <p>{data.price}</p>
                     <p>{data.title}</p>
                 </div>
-            ))}
+            
         </div>
     )
 }
 
 
-export default Mens;
+export default WomensDetails;

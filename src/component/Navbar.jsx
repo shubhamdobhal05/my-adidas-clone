@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+
 
 import "./navbar.css";
 
@@ -32,6 +34,9 @@ const Navbar = () => {
                     <li><Link to="/collections">COLLECTIONS</Link></li>
                     <li><Link to="/outlet">OUTLET</Link></li>
                     <li><input type="text" placeholder="Search" /></li>
+                    <NavLink to="/cart">
+                        <ShoppingCartIcon/>
+                    </NavLink>
                 </ul>
 
 

@@ -1,7 +1,7 @@
-import {legacy_createStore} from "redux";
-import { reducer } from "./reducer/reducer";
+import { legacy_createStore } from "redux";
+import rootReducers from "./reducer/combineReducer";
 
 
-const store = legacy_createStore(reducer);
+const store = legacy_createStore(rootReducers);
 
-export {store}
+export default store;
